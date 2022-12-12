@@ -1,0 +1,7 @@
+{
+  "name": "vault-test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
