@@ -116,19 +116,23 @@ export const useVault = () => {
   const storeSession = async (value: string): Promise<void> => {
     setSession(value);
     await vault.setValue(key, value);
+    console.log('vault.storeSession success');
   };
 
   const restoreSession = async (): Promise<void> => {
     const value = await vault.getValue(key);
     setSession(value);
+    console.log('vault.restoreSession success');
   };
 
   const lockVault = async (): Promise<void> => {
     await vault.lock();
+    console.log('vault.lockVault success');
   };
   
   const unlockVault = async (): Promise<void> => {
     await vault.unlock();
+    console.log('vault.unlockVault success');
   };
 
     
